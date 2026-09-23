@@ -1,272 +1,251 @@
-/* ================================
-   RESET
-================================ */
-
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', Arial, sans-serif;
-    background: #e9f7ff;
-    color: #164b7a;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef7ff;
+    color: #444;
 }
 
-
-/* ================================
-   HEADER
-================================ */
-
-.header {
-    min-height: 250px;
-
-    background:
-        linear-gradient(
-            rgba(0, 126, 214, 0.35),
-            rgba(0, 80, 160, 0.55)
-        ),
-        url("latar-laut.jpg");
-
-    background-size: cover;
-    background-position: center;
-
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #075985, #0284c7, #38bdf8);
     color: white;
-
     text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    padding: 30px 20px;
+    padding: 45px 20px;
 }
 
-
-/* Logo */
-
-.logo-restoran {
-    font-size: 45px;
-    margin-bottom: 5px;
-}
-
-
-/* Judul */
-
-.header h1 {
-    font-size: 42px;
-    font-weight: 700;
+header h1 {
+    margin: 0;
+    font-size: 38px;
     letter-spacing: 1px;
-    text-shadow: 2px 3px 5px rgba(0,0,0,0.3);
 }
 
-
-/* Subjudul */
-
-.header p {
-    font-size: 23px;
-    font-style: italic;
-    margin-top: 8px;
+header p {
+    margin-top: 12px;
+    font-size: 20px;
 }
 
-
-/* ================================
-   NAVBAR
-================================ */
-
-.navbar {
-    background: #07529b;
-
+/* NAVIGASI */
+nav {
+    background: #075985;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    min-height: 65px;
+    flex-wrap: wrap;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.navbar a {
+nav a {
     color: white;
     text-decoration: none;
-
-    padding: 20px 30px;
-
-    font-size: 18px;
-    font-weight: 600;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
+    font-weight: bold;
+    padding: 15px 25px;
+    margin: 4px;
+    border-radius: 10px;
     transition: 0.3s;
 }
 
-
-/* Hover */
-
-.navbar a:hover {
-    background: #087de0;
+nav a:hover {
+    background: #0284c7;
+    transform: translateY(-2px);
 }
 
-
-/* Menu aktif */
-
-.navbar a.active {
-    background: #168de8;
-}
-
-
-/* ================================
-   CONTAINER
-================================ */
-
+/* KONTEN */
 .container {
     width: 90%;
-    max-width: 1250px;
-
-    margin: 30px auto;
-
-    background: rgba(255,255,255,0.45);
-
-    padding: 30px;
-
-    border-radius: 20px;
+    max-width: 1100px;
+    margin: 40px auto;
 }
 
-
-/* ================================
-   JUDUL PROFIL
-================================ */
-
-.judul-profil {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.judul-profil i {
-    font-size: 42px;
-    color: #0875cf;
-}
-
-.judul-profil h2 {
-    font-size: 34px;
-    color: #075bb0;
-}
-
-
-/* Garis */
-
-.garis {
-    width: 65px;
-    height: 3px;
-
-    background: #1598df;
-
-    margin-top: 8px;
-    margin-bottom: 20px;
-}
-
-
-/* ================================
-   KARTU PROFIL
-================================ */
-
-.profil-card {
-    background: rgba(255,255,255,0.92);
-
+/* CARD */
+.box {
+    background: white;
+    padding: 35px;
     border-radius: 18px;
-
-    padding: 28px;
-
-    display: grid;
-
-    grid-template-columns: 43% 57%;
-
-    gap: 30px;
-
-    box-shadow:
-        0 8px 25px rgba(0, 80, 150, 0.15);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+    margin-bottom: 25px;
 }
 
+h2 {
+    color: #0369a1;
+    font-size: 30px;
+    margin-top: 0;
+}
 
-/* ================================
-   FOTO
-================================ */
+h3 {
+    color: #0284c7;
+}
+
+/* TOMBOL */
+.btn {
+    display: inline-block;
+    background: #0284c7;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #0369a1;
+}
+
+/* FOTO */
+.foto-profil {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
 
 .foto-profil img {
     width: 100%;
-
-    height: 440px;
-
+    height: 100%;
     object-fit: cover;
-
-    border-radius: 15px;
-
     display: block;
-
-    box-shadow:
-        0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* HOME */
+.hero {
+    text-align: center;
+    padding: 60px 30px;
+    background: linear-gradient(
+        rgba(3, 105, 161, 0.75),
+        rgba(14, 165, 233, 0.75)
+    ),
+    url("latar-laut.jpg");
 
-/* ================================
-   INFORMASI
-================================ */
-
-.informasi {
-    padding: 5px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 20px;
 }
 
-.informasi p {
-    font-size: 17px;
+.hero h2 {
+    color: white;
+    font-size: 40px;
+}
 
+.hero p {
+    font-size: 20px;
     line-height: 1.7;
-
-    margin-bottom: 22px;
-
-    color: #275579;
 }
 
-
-/* Judul informasi */
-
-.judul-info {
-    display: flex;
-    align-items: center;
-
-    gap: 12px;
-
-    width: fit-content;
-
-    background: #e0f1ff;
-
-    border-radius: 30px;
-
-    padding: 7px 18px;
-
-    margin-bottom: 12px;
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.judul-info i {
-    color: #086dcc;
-    font-size: 22px;
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
-.judul-info h2 {
-    color: #075bb0;
-    font-size: 23px;
+.card h3 {
+    margin-top: 10px;
 }
 
-
-/* Visi */
-
-.visi {
-    font-style: italic;
+/* ABOUT */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
 }
 
+.about-card {
+    background: #f8fcff;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid #0284c7;
+}
 
-/* ================================
-   MISI
-================================ */
+.about-card p {
+    line-height: 1.8;
+}
+
+/* GALLERY */
+.gallery-image {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 15px;
+    display: block;
+    margin: 20px auto;
+}
+
+video {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 15px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* KONTAK */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.contact-item {
+    background: #f8fcff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.contact-item strong {
+    color: #0369a1;
+}
+
+.contact-item a {
+    color: #0284c7;
+}
+
+/* FOOTER */
+footer {
+    background: #075985;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+/* HP */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .grid,
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .foto-profil {
+        height: 300px;
+    }
+}

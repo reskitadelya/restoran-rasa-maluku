@@ -1,20 +1,67 @@
-<div class="box">
+<!DOCTYPE html>
+<html lang="id">
 
-    <h2>Restoran Rasa Maluku</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <p>
-        Berikut foto dan video kuliner khas Maluku.
-    </p>
+    <title>Gallery - Restoran Rasa Maluku</title>
 
-    <img src="foto-makanan.jpg"
-         alt="Ikan Bakar Khas Maluku"
-         width="500">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <br><br>
+<body>
 
-    <video controls width="500">
-        <source src="vidio-maluku.mp4" type="video/mp4">
-        Video tidak dapat diputar.
-    </video>
+<header>
+    <h1>RESTORAN RASA MALUKU</h1>
+    <p>Gallery Kuliner</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="profil.html">👤 Profil</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="gallery.html">🖼️ Gallery</a>
+    <a href="kontak.html">📞 Kontak</a>
+</nav>
+
+<div class="container">
+
+    <div class="box">
+
+        <h2>🖼️ Gallery Kuliner Maluku</h2>
+
+        <p>
+            Berikut foto dan video kuliner khas Maluku.
+        </p>
+
+        <img
+            src="foto-makanan.jpg"
+            alt="Ikan Bakar Khas Maluku"
+            class="gallery-image"
+        >
+
+        <h3>🐟 Ikan Bakar Khas Maluku</h3>
+
+    </div>
+
+    <div class="box">
+
+        <h2>🎬 Video Kuliner Maluku</h2>
+
+        <video controls>
+            <source src="vidio-maluku.mp4" type="video/mp4">
+
+            Browser kamu tidak mendukung video.
+        </video>
+
+    </div>
 
 </div>
+
+<footer>
+    &copy; 2026 Restoran Rasa Maluku
+</footer>
+
+</body>
+</html>
