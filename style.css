@@ -1,166 +1,272 @@
-/* RESET */
+/* ================================
+   RESET
+================================ */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #dff3ff;
-    color: #23445c;
-    line-height: 1.6;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #e9f7ff;
+    color: #164b7a;
 }
 
-/* HEADER */
-header {
-    background: linear-gradient(
-        rgba(0, 76, 150, 0.90),
-        rgba(0, 119, 190, 0.85)
-    ),
-    url("foto-makanan.jpg");
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    min-height: 250px;
+
+    background:
+        linear-gradient(
+            rgba(0, 126, 214, 0.35),
+            rgba(0, 80, 160, 0.55)
+        ),
+        url("latar-laut.jpg");
 
     background-size: cover;
     background-position: center;
 
     color: white;
+
     text-align: center;
-    padding: 55px 20px 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 20px;
 }
 
-header h1 {
-    font-size: 38px;
+
+/* Logo */
+
+.logo-restoran {
+    font-size: 45px;
+    margin-bottom: 5px;
+}
+
+
+/* Judul */
+
+.header h1 {
+    font-size: 42px;
+    font-weight: 700;
     letter-spacing: 1px;
-    margin-bottom: 10px;
+    text-shadow: 2px 3px 5px rgba(0,0,0,0.3);
 }
 
-header p {
-    font-size: 18px;
+
+/* Subjudul */
+
+.header p {
+    font-size: 23px;
+    font-style: italic;
+    margin-top: 8px;
 }
 
-/* NAVIGASI */
-nav {
-    background: #005b9f;
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+    background: #07529b;
+
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+
+    min-height: 65px;
 }
 
-nav a {
+.navbar a {
     color: white;
     text-decoration: none;
-    padding: 15px 25px;
-    font-weight: bold;
+
+    padding: 20px 30px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
     transition: 0.3s;
 }
 
-nav a:hover {
-    background: #168de2;
+
+/* Hover */
+
+.navbar a:hover {
+    background: #087de0;
 }
 
-nav a.active {
-    background: #168de2;
+
+/* Menu aktif */
+
+.navbar a.active {
+    background: #168de8;
 }
 
-/* MAIN */
-main {
-    max-width: 1100px;
-    margin: 45px auto;
-    padding: 0 20px;
-}
 
-/* KARTU PROFIL */
-.profil-card {
-    background: white;
-    border-radius: 18px;
+/* ================================
+   CONTAINER
+================================ */
+
+.container {
+    width: 90%;
+    max-width: 1250px;
+
+    margin: 30px auto;
+
+    background: rgba(255,255,255,0.45);
+
     padding: 30px;
-    box-shadow: 0 8px 25px rgba(0, 80, 130, 0.15);
+
+    border-radius: 20px;
 }
 
-.profil-card > h2 {
-    color: #005b9f;
-    font-size: 30px;
-    margin-bottom: 25px;
+
+/* ================================
+   JUDUL PROFIL
+================================ */
+
+.judul-profil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-/* CONTENT */
-.profil-content {
+.judul-profil i {
+    font-size: 42px;
+    color: #0875cf;
+}
+
+.judul-profil h2 {
+    font-size: 34px;
+    color: #075bb0;
+}
+
+
+/* Garis */
+
+.garis {
+    width: 65px;
+    height: 3px;
+
+    background: #1598df;
+
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+
+/* ================================
+   KARTU PROFIL
+================================ */
+
+.profil-card {
+    background: rgba(255,255,255,0.92);
+
+    border-radius: 18px;
+
+    padding: 28px;
+
     display: grid;
-    grid-template-columns: 1fr 1.3fr;
+
+    grid-template-columns: 43% 57%;
+
     gap: 30px;
-    align-items: start;
+
+    box-shadow:
+        0 8px 25px rgba(0, 80, 150, 0.15);
 }
 
-/* FOTO */
-.foto-container {
-    width: 100%;
-}
 
-.foto-container img {
+/* ================================
+   FOTO
+================================ */
+
+.foto-profil img {
     width: 100%;
-    height: 390px;
+
+    height: 440px;
+
     object-fit: cover;
-    border-radius: 14px;
+
+    border-radius: 15px;
+
     display: block;
-    box-shadow: 0 5px 15px rgba(0, 70, 120, 0.20);
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* TEKS */
-.profil-text h2 {
-    color: #0064a8;
-    margin-bottom: 8px;
-    margin-top: 5px;
-    font-size: 24px;
+
+/* ================================
+   INFORMASI
+================================ */
+
+.informasi {
+    padding: 5px;
 }
 
-.profil-text p {
-    margin-bottom: 18px;
-    font-size: 16px;
+.informasi p {
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+
+    color: #275579;
 }
 
-.profil-text ul {
-    padding-left: 25px;
+
+/* Judul informasi */
+
+.judul-info {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    width: fit-content;
+
+    background: #e0f1ff;
+
+    border-radius: 30px;
+
+    padding: 7px 18px;
+
+    margin-bottom: 12px;
 }
 
-.profil-text li {
-    margin-bottom: 8px;
+.judul-info i {
+    color: #086dcc;
+    font-size: 22px;
 }
 
-/* FOOTER */
-footer {
-    background: #005b9f;
-    color: white;
-    text-align: center;
-    padding: 18px;
-    margin-top: 40px;
+.judul-info h2 {
+    color: #075bb0;
+    font-size: 23px;
 }
 
-/* RESPONSIVE UNTUK HP */
-@media (max-width: 768px) {
 
-    header h1 {
-        font-size: 27px;
-    }
+/* Visi */
 
-    header p {
-        font-size: 15px;
-    }
-
-    nav a {
-        padding: 12px 14px;
-        font-size: 14px;
-    }
-
-    .profil-content {
-        grid-template-columns: 1fr;
-    }
-
-    .foto-container img {
-        height: 300px;
-    }
-
-    .profil-card {
-        padding: 20px;
-    }
+.visi {
+    font-style: italic;
 }
+
+
+/* ================================
+   MISI
+================================ */
