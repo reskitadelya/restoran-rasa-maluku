@@ -1,99 +1,243 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Restoran Rasa Maluku</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Restoran Rasa Maluku</title>
 
     <style>
-        body {
-            font-family: Arial;
-            background-color: #fff8ed;
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
         }
 
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dff3ff, #eef9ff);
+            color: #16466b;
+        }
+
+        /* HEADER */
         header {
-            background-color: #8b4513;
+            background: linear-gradient(135deg, #005baa, #0077cc, #003f7d);
             color: white;
             text-align: center;
-            padding: 15px;
+            padding: 35px 20px 25px;
         }
 
+        header h1 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 17px;
+        }
+
+        /* NAVIGASI */
         nav {
-            background-color: #6f3510;
+            background: #003f7d;
             text-align: center;
-            padding: 12px;
+            padding: 0;
         }
 
         nav a {
+            display: inline-block;
             color: white;
             text-decoration: none;
-            margin: 18px;
+            padding: 16px 22px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
+        nav a:hover {
+            background: #0077cc;
+        }
+
+        nav a.active {
+            background: #168be0;
+        }
+
+        /* KONTEN */
         .container {
-            width: 85%;
-            margin: 20px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
+            max-width: 1050px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
-        h2 {
-            color: #8b4513;
+        .profile-card {
+            background: white;
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 5px 20px rgba(0, 70, 120, 0.15);
         }
 
-        footer {
-            background-color: #8b4513;
+        .profile-card h2 {
+            color: #005baa;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        .content {
+            display: flex;
+            gap: 35px;
+            align-items: flex-start;
+        }
+
+        /* GAMBAR */
+        .image-box {
+            width: 40%;
+            min-height: 260px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #0088cc, #005baa);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
+        }
+
+        .image-box div {
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 1.5;
+        }
+
+        /* TEKS */
+        .text-box {
+            flex: 1;
+        }
+
+        .text-box h3 {
+            color: #0067b9;
+            margin-bottom: 10px;
+            font-size: 23px;
+        }
+
+        .text-box p {
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #315a75;
+        }
+
+        .text-box ul {
+            padding-left: 22px;
+            line-height: 1.8;
+            color: #315a75;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #003f7d;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 50px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 26px;
+            }
+
+            nav a {
+                padding: 12px 10px;
+                font-size: 14px;
+            }
+
+            .content {
+                flex-direction: column;
+            }
+
+            .image-box {
+                width: 100%;
+                min-height: 180px;
+            }
+
+            .profile-card {
+                padding: 25px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>RESTORAN RASA MALUKU</h1>
-    <p>Nikmati Kelezatan Kuliner Khas Maluku</p>
-</header>
+    <header>
+        <h1>RESTORAN RASA MALUKU</h1>
+        <p>Nikmati Kelezatan Kuliner Khas Maluku</p>
+    </header>
 
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="profil.html">Profil</a> |
-    <a href="about.html">About</a> |
-    <a href="gallery.html">Gallery</a> |
-    <a href="kontak.html">Kontak</a>
-</nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="profil.html" class="active">Profil</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
 
-<div class="container">
+    <main class="container">
 
-    <h2>Selamat Datang</h2>
+        <section class="profile-card">
 
-    <p>
-        Assalamu'alaikum. Selamat datang di website
-        Restoran Rasa Maluku. Website ini berisi informasi
-        tentang restoran dan berbagai kuliner khas Maluku.
-    </p>
+            <h2>Profil Restoran</h2>
 
-    <p>
-        Silakan kunjungi halaman
-        <a href="profil.html">Profil</a>,
-        <a href="about.html">About</a>,
-        <a href="gallery.html">Gallery</a>,
-        atau <a href="kontak.html">Kontak</a>.
-    </p>
+            <div class="content">
 
-    <p>
-        Informasi tambahan dapat dilihat melalui
-        <a href="https://www.google.com" target="_blank">Google</a>.
-    </p>
+                <div class="image-box">
+                    <div>
+                        🍽️<br>
+                        RESTORAN<br>
+                        RASA MALUKU
+                    </div>
+                </div>
 
-</div>
+                <div class="text-box">
 
-<footer>
-    &copy; 2026 Restoran Rasa Maluku
-</footer>
+                    <h3>Tentang Kami</h3>
+
+                    <p>
+                        Restoran Rasa Maluku adalah restoran yang menyajikan
+                        berbagai masakan khas Maluku dengan cita rasa autentik
+                        dan bahan-bahan pilihan.
+                    </p>
+
+                    <p>
+                        Kami hadir untuk memperkenalkan kekayaan kuliner Maluku
+                        kepada masyarakat luas dengan suasana yang nyaman dan
+                        pelayanan yang baik.
+                    </p>
+
+                    <h3>Visi</h3>
+
+                    <p>
+                        Menjadi restoran pilihan untuk menikmati kuliner khas
+                        Maluku dengan cita rasa autentik dan kualitas terbaik.
+                    </p>
+
+                    <h3>Misi</h3>
+
+                    <ul>
+                        <li>Melestarikan dan memperkenalkan kuliner khas Maluku.</li>
+                        <li>Memberikan pengalaman makan yang berkesan.</li>
+                        <li>Menggunakan bahan makanan yang berkualitas.</li>
+                        <li>Memberikan pelayanan yang ramah dan nyaman.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; 2026 Restoran Rasa Maluku
+    </footer>
 
 </body>
 </html>
