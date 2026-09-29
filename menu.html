@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menu - Restoran Rasa Maluku</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================
+           TABEL MENU
+        ========================= */
+
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .menu-table th {
+            background: #07558b;
+            color: white;
+            padding: 14px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .menu-table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+            color: #333;
+        }
+
+        .menu-table tr:nth-child(even) {
+            background: #f5f9fc;
+        }
+
+        .menu-table tr:hover {
+            background: #e8f5ff;
+        }
+
+        .menu-table img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .kategori-makanan {
+            background: #0874bf !important;
+            color: white !important;
+            font-weight: bold;
+        }
+
+        .kategori-minuman {
+            background: #008f8a !important;
+            color: white !important;
+            font-weight: bold;
+        }
+
+        .kategori-dessert {
+            background: #d92d75 !important;
+            color: white !important;
+            font-weight: bold;
+        }
+
+        .harga {
+            font-weight: bold;
+            color: #07558b;
+        }
+
+        .menu-image {
+            width: 100%;
+            max-width: 900px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 700px) {
+            .menu-table {
+                font-size: 13px;
+            }
+
+            .menu-table img {
+                width: 100px;
+                height: 75px;
+            }
+
+            .menu-table th,
+            .menu-table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>RESTORAN RASA MALUKU</h1>
+    <p>Nikmati Kelezatan Kuliner Khas Maluku</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="profil.html">👤 Profil</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="gallery.html">🖼️ Gallery</a>
+    <a href="menu.html">🍽️ Menu</a>
+    <a href="kontak.html">📞 Kontak</a>
+</nav>
+
+<div class="container">
+
+    <!-- JUDUL MENU -->
+    <section class="hero">
+        <h2>🍽️ Daftar Menu</h2>
+
+        <p>
+            Nikmati berbagai makanan, minuman,
+            dan dessert khas Restoran Rasa Maluku.
+        </p>
+    </section>
+
+
+    <!-- MENU -->
+    <div class="box">
+
+        <h2>📋 Menu Restoran Rasa Maluku</h2>
+
+        <p>
+            Berikut adalah daftar menu yang tersedia
+            di Restoran Rasa Maluku.
+        </p>
+
+
+        <!-- GAMBAR GABUNGAN MENU -->
+        <img
+            src="images/menu-gabungan.jpg"
+            alt="Daftar Menu Restoran Rasa Maluku"
+            class="menu-image"
+        >
+
+
+        <!-- TABEL MENU -->
+        <div style="overflow-x:auto;">
+
+            <table class="menu-table">
+
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Kategori</th>
+                        <th>Gambar</th>
+                        <th>Nama Menu</th>
+                        <th>Deskripsi</th>
+                        <th>Harga</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <!-- ================= MAKANAN ================= -->
+
+                    <tr>
+                        <td>1</td>
+
+                        <td class="kategori-makanan">
+                            🍴 Makanan
+                        </td>
+
+                        <td>
+                            <img
+                                src="images/ikan-kuah-kuning.jpg"
+                                alt="Ikan Kuah Kuning"
+                            >
+                        </td>
+
+                        <td>
+                            <strong>Ikan Kuah Kuning</strong>
+                        </td>
+
+                        <td>
+                            Ikan segar dengan kuah rempah
+                            khas Maluku.
+                        </td>
+
+                        <td class="harga">
+                            Rp 35.000
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>2</td>
+
+                        <td class="kategori-makanan">
+                            🍴 Makanan
+                        </td>
+
+                        <td>
+                            <img
+                                src="images/papeda.jpg"
+                                alt="Papeda"
+                            >
+                        </td>
+
+                        <td>
+                            <strong>Papeda</strong>
+                        </td>
+
+                        <td>
+                            Sagu lembut yang nikmat disajikan
+                            bersama ikan kuah.
+                        </td>
+
+                        <td class="harga">
+                            Rp 30.000
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>3</td>
+
+                        <td class="kategori-makanan">
+                            🍴 Makanan
+                        </td>
+
+                        <td>
+                            <img
+                                src="images/ikan-bakar-rica.jpg"
+                                alt="Ikan Bakar Rica"
+                            >
+                        </td>
+
+                        <td>
+                            <strong>Ikan Bakar Rica</strong>
+                        </td>
+
+                        <td>
+                            Ikan bakar dengan sambal rica
+                            yang pedas dan segar.
+                        </td>
+
+                        <td class="harga">
+                            Rp 45.000
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>4</td>
+
+                        <td class="kategori-makanan">
+                            🍴 Makanan
+                        </td>
+
+                        <td>
+                            <img
+                                src="images/ayam-rica-rica.jpg"
+                                alt="Ayam Rica-Rica"
+                            >
+                        </td>
+
+                        <td>
+                            <strong>Ayam Rica-Rica</strong>
+                        </td>
+
+                        <td>
+                            Ayam berbumbu pedas dengan
+                            aroma rempah.
+                        </td>
+
+                        <td class="harga">
+                            Rp 40.000
+                        </td>
+                    </tr>
+
+
+                    <!-- ================= MINUMAN ================= -->
+
+                    <tr>
+                        <td>5</td>
+
+                        <td class="kategori-minuman">
+                            🥤 Minuman
+                        </td>
+
+                        <td>
+                            <img
+                                src="images/es-kelapa-muda.jpg"
+                                alt="Es Kelapa Muda"
+                            >
+                        </td>
+
+                        <td>
+                            <strong>Es Kelapa Muda</strong>
+                        </td>
+
+                        <td>
+                            Segar alami dari kelapa muda.
+                        </td>
+
+                        <td class="harga">
+                            Rp 15.000
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>6</td>
+
+                        <td class="kategori-minuman">
+                            🥤 Minuman
+                        </td>
+
+                        <td>
+                            <img
+                                src="images/jus-markisa.jpg"
+                                alt="Jus Markisa"
+                            >
+                        </td>
+
+                        <td>
+                            <strong>Jus Markisa</strong>
+                        </td>
+
+                        <td>
+                            Minuman dengan rasa asam,
+                            manis, dan menyegarkan.
+                        </td>
+
+                        <td class="harga">
+                            Rp 18.000
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>7</td>
+
+                        <td class="kategori-minuman">
+                            🥤 Minuman
+                        </td>
+
+                        <td>
+                            <img
+                                src="images/jus-mangga.jpg"
+                                alt="Jus Mangga"
+                            >
+                        </td>
+
+                        <td>
+                            <strong>Jus Mangga</strong>
+                        </td>
+
+                        <td>
+                            Minuman mangga yang manis,
+                            dingin, dan menyegarkan.
+                        </td>
+
+                        <td class="harga">
+                            Rp 16.000
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>8</td>
+
+                        <td class="kategori-minuman">
+                            🥤 Minuman
+                        </td>
+
+                        <td>
+                            <img
+                                src="images/es-teh-manis.jpg"
+                                alt="Es Teh Manis"
+                            >
+                        </td>
+
+                        <td>
+                            <strong>Es Teh Manis</strong>
+                        </td>
+
+                        <td>
+                            Teh manis dingin yang cocok
+                            untuk menemani makanan.
+                        </td>
+
+                        <td class="harga">
+                            Rp 8.000
+                        </td>
+                    </tr>
+
+
+                    <!-- ================= DESSERT ================= -->
+
+                    <tr>
+                        <td>9</td>
+
+                        <td class="kategori-dessert">
+                            🍰 Dessert
+                        </td>
+
+                        <td>
+                            <img
+                                src="images/pisang-goreng.jpg"
+                                alt="Pisang Goreng"
+                            >
+                        </td>
+
+                        <td>
+                            <strong>Pisang Goreng</strong>
+                        </td>
+
+                        <td>
+                            Renyah di luar dan lembut
+                            di dalam.
+                        </td>
+
+                        <td class="harga">
+                            Rp 12.000
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>10</td>
+
+                        <td class="kategori-dessert">
+                            🍰 Dessert
+                        </td>
+
+                        <td>
+                            <img
+                                src="images/sagu-mutiara.jpg"
+                                alt="Sagu Mutiara"
+                            >
+                        </td>
+
+                        <td>
+                            <strong>Sagu Mutiara</strong>
+                        </td>
+
+                        <td>
+                            Dessert lembut dengan cita rasa
+                            tradisional.
+                        </td>
+
+                        <td class="harga">
+                            Rp 15.000
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>11</td>
+
+                        <td class="kategori-dessert">
+                            🍰 Dessert
+                        </td>
+
+                        <td>
+                            <img
+                                src="images/es-doger.jpg"
+                                alt="Es Doger"
+                            >
+                        </td>
+
+                        <td>
+                            <strong>Es Doger</strong>
+                        </td>
+
+                        <td>
+                            Es segar dengan rasa khas
+                            Nusantara.
+                        </td>
+
+                        <td class="harga">
+                            Rp 15.000
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>12</td>
+
+                        <td class="kategori-dessert">
+                            🍰 Dessert
+                        </td>
+
+                        <td>
+                            <img
+                                src="images/kue-lapis-sagu.jpg"
+                                alt="Kue Lapis Sagu"
+                            >
+                        </td>
+
+                        <td>
+                            <strong>Kue Lapis Sagu</strong>
+                        </td>
+
+                        <td>
+                            Kelezatan tradisional berbahan
+                            dasar sagu.
+                        </td>
+
+                        <td class="harga">
+                            Rp 12.000
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- LANGKAH PEMESANAN -->
+
+    <div class="box">
+
+        <h2>🛒 Langkah-Langkah Pemesanan</h2>
+
+        <ol>
+            <li>Pilih menu yang ingin dipesan.</li>
+            <li>Catat nama menu dan jumlahnya.</li>
+            <li>Sampaikan pesanan kepada pelayan.</li>
+            <li>Konfirmasi total pembayaran.</li>
+            <li>Lakukan pembayaran.</li>
+            <li>Tunggu pesanan disiapkan.</li>
+        </ol>
+
+    </div>
+
+</div>
+
+
+<footer>
+    &copy; 2026 Restoran Rasa Maluku
+</footer>
+
+</body>
+</html>
