@@ -167,19 +167,16 @@ p {
 }
 
 
-/* FOTO PROFIL */
 .foto-profil {
     width: 100%;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 15px;
     margin-bottom: 25px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .foto-profil img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
 }
 
@@ -318,5 +315,237 @@ footer {
 
     .map-container iframe {
         height: 350px;
+    }
+}
+
+/* BACKGROUND HALAMAN MENU */
+body:has(.menu-category) {
+    background:
+        linear-gradient(
+            rgba(0, 70, 110, 0.72),
+            rgba(0, 120, 170, 0.72)
+        ),
+        url("menu-maluku.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* MENU */
+.menu-category {
+    padding-left: 25px;
+    line-height: 1.9;
+}
+
+.menu-category > li {
+    background: rgba(248, 252, 255, 0.95);
+    margin-bottom: 18px;
+    padding: 18px 20px;
+    border-left: 5px solid #0284c7;
+    border-radius: 12px;
+}
+
+.menu-category ul {
+    margin-top: 8px;
+}
+
+
+/* LANGKAH PEMESANAN */
+.order-steps {
+    background: rgba(248, 252, 255, 0.95);
+    padding: 25px 25px 25px 45px;
+    border-radius: 15px;
+    border-left: 5px solid #0284c7;
+    line-height: 2;
+}
+
+.order-steps li {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   FORM PENDAFTARAN
+========================= */
+
+.form-container {
+    width: 90%;
+    max-width: 850px;
+    margin: 40px auto;
+}
+
+
+/* JUDUL FORM */
+
+.form-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-title h2 {
+    color: #0369a1;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.form-title p {
+    color: #555;
+}
+
+
+/* KOTAK FORM */
+
+.form-box {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* GROUP FORM */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+/* LABEL */
+
+.form-group > label {
+    display: block;
+    color: #0369a1;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+/* INPUT, SELECT, TEXTAREA */
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background: #ffffff;
+}
+
+
+/* FOCUS */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0284c7;
+    box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.12);
+}
+
+
+/* TEXTAREA */
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+
+/* RADIO & CHECKBOX */
+
+.form-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-options label {
+    color: #444;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.form-options input {
+    margin-right: 6px;
+    accent-color: #0284c7;
+}
+
+
+/* TOMBOL */
+
+.form-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn-submit,
+.btn-reset {
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* KIRIM */
+
+.btn-submit {
+    background: #0284c7;
+    color: white;
+}
+
+.btn-submit:hover {
+    background: #0369a1;
+}
+
+
+/* RESET */
+
+.btn-reset {
+    background: #e2e8f0;
+    color: #444;
+}
+
+.btn-reset:hover {
+    background: #cbd5e1;
+}
+
+
+/* RESPONSIVE FORM */
+
+@media (max-width: 768px) {
+
+    .form-container {
+        width: 90%;
+    }
+
+    .form-box {
+        padding: 25px;
+    }
+
+    .form-title h2 {
+        font-size: 27px;
+    }
+
+    .form-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .btn-submit,
+    .btn-reset {
+        width: 100%;
     }
 }
