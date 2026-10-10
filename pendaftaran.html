@@ -1,14 +1,188 @@
-```html
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Pendaftaran - Restoran Rasa Maluku</title>
-
+    <title>Form Pendaftaran - Restoran Rasa Maluku</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .form-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.10);
+            max-width: 850px;
+            margin: 30px auto;
+        }
+
+        .form-card h2 {
+            text-align: center;
+        }
+
+        .form-card .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group > label,
+        .section-label {
+            display: block;
+            font-weight: bold;
+            color: #0369a1;
+            margin-bottom: 9px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="tel"],
+        .form-group input[type="date"],
+        .form-group input[type="number"],
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #b9dced;
+            border-radius: 8px;
+            background: #f8fcff;
+            font: inherit;
+        }
+
+        .menu-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .menu-item {
+            padding: 15px;
+            background: #f0f9ff;
+            border: 1px solid #d5edf9;
+            border-radius: 10px;
+        }
+
+        .menu-item label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .menu-item input[type="number"] {
+            width: 100%;
+            padding: 9px;
+            border: 1px solid #b9dced;
+            border-radius: 7px;
+            margin-top: 8px;
+        }
+
+        .payment-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px;
+            margin-bottom: 10px;
+            border: 1px solid #d5edf9;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .payment-option:hover {
+            background: #f0f9ff;
+        }
+
+        .payment-option input {
+            accent-color: #0284c7;
+        }
+
+        .payment-logo {
+            font-weight: bold;
+            color: #075985;
+            min-width: 105px;
+        }
+
+        .visa {
+            color: #1a1f71;
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        .mastercard {
+            color: #eb001b;
+            font-size: 14px;
+        }
+
+        .wallet {
+            color: #0284c7;
+        }
+
+        .payment-detail {
+            display: none;
+            margin: 12px 0 20px;
+            padding: 18px;
+            background: #f0f9ff;
+            border-radius: 10px;
+        }
+
+        .payment-detail label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #0369a1;
+        }
+
+        .payment-detail input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #b9dced;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .form-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .form-buttons button {
+            padding: 13px 25px;
+            border: none;
+            border-radius: 9px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background: #0284c7;
+            color: white;
+        }
+
+        .submit-btn:hover {
+            background: #0369a1;
+        }
+
+        .reset-btn {
+            background: #e0f2fe;
+            color: #075985;
+        }
+
+        @media (max-width: 650px) {
+            .menu-list {
+                grid-template-columns: 1fr;
+            }
+
+            .form-card {
+                padding: 20px;
+            }
+
+            .form-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -17,7 +191,6 @@
     <h1>RESTORAN RASA MALUKU</h1>
     <p>Nikmati Kelezatan Kuliner Khas Maluku</p>
 </header>
-
 
 <nav>
     <a href="index.html">🏠 Home</a>
@@ -29,205 +202,223 @@
     <a href="pendaftaran.html">📜 Pendaftaran</a>
 </nav>
 
-
 <div class="container">
 
-    <div class="box">
+    <div class="form-card">
+        <h2>Form Pendaftaran</h2>
 
-        <h2>📜 Form Pendaftaran</h2>
-
-        <p>
-            Silakan isi data berikut untuk melakukan
-            pendaftaran di Restoran Rasa Maluku.
+        <p class="intro">
+            Silakan isi data pemesanan untuk menikmati
+            kuliner khas Restoran Rasa Maluku.
         </p>
 
-
-        <form>
+        <form id="formPendaftaran">
 
             <div class="form-group">
-                <label>Nama Lengkap</label>
-
-                <input
-                    type="text"
-                    name="nama"
-                    placeholder="Masukkan nama lengkap"
-                    required
-                >
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama"
+                       placeholder="Masukkan nama lengkap" required>
             </div>
 
-
             <div class="form-group">
-                <label>Email</label>
-
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Masukkan email"
-                    required
-                >
+                <label for="hp">Nomor HP</label>
+                <input type="tel" id="hp" name="hp"
+                       placeholder="Contoh: 081234567890"
+                       pattern="[0-9+ -]{9,16}" required>
             </div>
 
-
             <div class="form-group">
-                <label>Nomor Telepon</label>
-
-                <input
-                    type="tel"
-                    name="telepon"
-                    placeholder="Masukkan nomor telepon"
-                    required
-                >
+                <label for="tanggal">Tanggal Booking</label>
+                <input type="date" id="tanggal" name="tanggal"
+                       required>
             </div>
 
-
             <div class="form-group">
-
-                <label>Jenis Kelamin</label>
-
-                <label class="pilihan">
-                    <input
-                        type="radio"
-                        name="jenis_kelamin"
-                        value="Laki-laki"
-                    >
-                    Laki-laki
-                </label>
-
-                <label class="pilihan">
-                    <input
-                        type="radio"
-                        name="jenis_kelamin"
-                        value="Perempuan"
-                    >
-                    Perempuan
-                </label>
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label>Menu Favorit</label>
-
-                <select name="menu_favorit">
-
-                    <option value="">
-                        -- Pilih Menu Favorit --
-                    </option>
-
-                    <option value="Papeda">
-                        Papeda
-                    </option>
-
-                    <option value="Ikan Kuah Kuning">
-                        Ikan Kuah Kuning
-                    </option>
-
-                    <option value="Nasi Kelapa">
-                        Nasi Kelapa
-                    </option>
-
-                    <option value="Ikan Bakar">
-                        Ikan Bakar
-                    </option>
-
-                    <option value="Sagu">
-                        Sagu
-                    </option>
-
-                    <option value="Lainnya">
-                        Lainnya
-                    </option>
-
+                <label for="paket">Pilihan Paket</label>
+                <select id="paket" name="paket" required>
+                    <option value="">-- Pilih Paket --</option>
+                    <option value="Paket Individu">Paket Individu</option>
+                    <option value="Paket Keluarga">Paket Keluarga</option>
+                    <option value="Paket Rombongan">Paket Rombongan</option>
                 </select>
-
             </div>
-
 
             <div class="form-group">
+                <span class="section-label">
+                    Pilihan Menu dan Jumlah Item
+                </span>
 
-                <label>Pilihan Layanan</label>
+                <p>Pilih kategori menu yang diinginkan dan isi jumlahnya.</p>
 
-                <label class="pilihan">
-                    <input
-                        type="checkbox"
-                        name="layanan"
-                        value="Makan di Tempat"
-                    >
-                    Makan di Tempat
-                </label>
+                <div class="menu-list">
 
-                <label class="pilihan">
-                    <input
-                        type="checkbox"
-                        name="layanan"
-                        value="Take Away"
-                    >
-                    Take Away
-                </label>
+                    <div class="menu-item">
+                        <label>
+                            <input type="checkbox" name="kategori"
+                                   value="Makanan">
+                            Makanan
+                        </label>
+                        <span>Jumlah item</span>
+                        <input type="number" name="jumlah_makanan"
+                               min="1" placeholder="Jumlah"
+                               aria-label="Jumlah makanan">
+                    </div>
 
-                <label class="pilihan">
-                    <input
-                        type="checkbox"
-                        name="layanan"
-                        value="Pesan Antar"
-                    >
-                    Pesan Antar
-                </label>
+                    <div class="menu-item">
+                        <label>
+                            <input type="checkbox" name="kategori"
+                                   value="Minuman">
+                            Minuman
+                        </label>
+                        <span>Jumlah item</span>
+                        <input type="number" name="jumlah_minuman"
+                               min="1" placeholder="Jumlah"
+                               aria-label="Jumlah minuman">
+                    </div>
 
+                    <div class="menu-item">
+                        <label>
+                            <input type="checkbox" name="kategori"
+                                   value="Dessert">
+                            Dessert
+                        </label>
+                        <span>Jumlah item</span>
+                        <input type="number" name="jumlah_dessert"
+                               min="1" placeholder="Jumlah"
+                               aria-label="Jumlah dessert">
+                    </div>
+
+                </div>
             </div>
-
 
             <div class="form-group">
+                <span class="section-label">Metode Pembayaran</span>
 
-                <label>Alamat</label>
+                <label class="payment-option">
+                    <input type="radio" name="pembayaran"
+                           value="Visa" required>
+                    <span class="payment-logo visa">VISA</span>
+                    <span>Kartu Debit/Kredit Visa</span>
+                </label>
 
-                <textarea
-                    name="alamat"
-                    rows="4"
-                    placeholder="Masukkan alamat lengkap"
-                ></textarea>
+                <label class="payment-option">
+                    <input type="radio" name="pembayaran"
+                           value="Mastercard">
+                    <span class="payment-logo mastercard">
+                        ● Mastercard
+                    </span>
+                    <span>Kartu Debit/Kredit Mastercard</span>
+                </label>
 
+                <label class="payment-option">
+                    <input type="radio" name="pembayaran"
+                           value="GoPay">
+                    <span class="payment-logo wallet">GoPay</span>
+                    <span>Dompet Digital GoPay</span>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="pembayaran"
+                           value="DANA">
+                    <span class="payment-logo wallet">DANA</span>
+                    <span>Dompet Digital DANA</span>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="pembayaran"
+                           value="OVO">
+                    <span class="payment-logo wallet">OVO</span>
+                    <span>Dompet Digital OVO</span>
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio" name="pembayaran"
+                           value="ShopeePay">
+                    <span class="payment-logo wallet">ShopeePay</span>
+                    <span>Dompet Digital ShopeePay</span>
+                </label>
             </div>
-
 
             <div class="form-group">
-
-                <label>Keterangan</label>
-
-                <textarea
-                    name="keterangan"
-                    rows="4"
-                    placeholder="Masukkan keterangan tambahan"
-                ></textarea>
-
+                <label for="nomorPembayaran">
+                    Nomor Kartu atau Nomor Akun Dompet Digital
+                </label>
+                <input type="text" id="nomorPembayaran"
+                       name="nomorPembayaran"
+                       placeholder="Masukkan nomor untuk simulasi"
+                       autocomplete="off">
+                <small>
+                    Untuk tugas demonstrasi, gunakan nomor contoh.
+                    Jangan masukkan nomor kartu atau data pembayaran asli.
+                </small>
             </div>
 
-
-            <div class="form-button">
-
-                <button type="submit">
-                    📩 Daftar
+            <div class="form-buttons">
+                <button type="submit" class="submit-btn">
+                    Submit Pendaftaran
                 </button>
 
-                <button type="reset">
-                    🔄 Ulangi
+                <button type="reset" class="reset-btn">
+                    Reset Form
                 </button>
-
             </div>
+
+            <p id="pesan" role="status"></p>
 
         </form>
-
     </div>
 
 </div>
-
 
 <footer>
     &copy; 2026 Restoran Rasa Maluku
 </footer>
 
+<script>
+    const form = document.getElementById("formPendaftaran");
+    const pesan = document.getElementById("pesan");
+    const nomorPembayaran = document.getElementById("nomorPembayaran");
+
+    document.querySelectorAll('input[name="pembayaran"]').forEach(function(radio) {
+        radio.addEventListener("change", function() {
+            const pilihan = document.querySelector(
+                'input[name="pembayaran"]:checked'
+            );
+
+            if (pilihan) {
+                nomorPembayaran.placeholder =
+                    "Nomor contoh untuk " + pilihan.value;
+            }
+        });
+    });
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        if (!form.reportValidity()) {
+            return;
+        }
+
+        const kategori = document.querySelectorAll(
+            'input[name="kategori"]:checked'
+        );
+
+        if (kategori.length === 0) {
+            pesan.textContent = "Silakan pilih minimal satu kategori menu.";
+            pesan.style.color = "#b91c1c";
+            return;
+        }
+
+        pesan.textContent =
+            "Form berhasil diperiksa! Ini adalah simulasi pendaftaran. " +
+            "Data belum dikirim atau disimpan ke server.";
+        pesan.style.color = "#0369a1";
+    });
+
+    form.addEventListener("reset", function() {
+        pesan.textContent = "";
+    });
+</script>
 
 </body>
 </html>
-```
